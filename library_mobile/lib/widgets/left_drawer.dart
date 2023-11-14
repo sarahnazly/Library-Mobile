@@ -42,7 +42,6 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
-          // OK TODO: Bagian routing
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Halaman Utama'),

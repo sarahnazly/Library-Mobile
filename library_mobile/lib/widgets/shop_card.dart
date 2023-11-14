@@ -5,7 +5,9 @@ class BookItem {
   final String name;
   final IconData icon;
   final Color color;
+
   BookItem(this.name, this.icon, this.color);
+  
 }
 
 class BookCard extends StatelessWidget {
@@ -25,6 +27,15 @@ class BookCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
+
+          // Navigate ke route yang sesuai (tergantung jenis tombol)
+          if (item.name == "Tambah Item") {
+            // OK TODO: Gunakan Navigator.push untuk melakukan navigasi ke MaterialPageRoute yang mencakup ShopFormPage.
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ShopFormPage()),
+            );
+          }
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
